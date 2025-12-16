@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argentina Soccer Quiz</title>
+<link rel="stylesheet" href="css/argentina-quiz.css">
+</head>
+<body>
+  <a href="scratch.html" class="top-link">Back to Argentina Page</a>
+
+<h1>Argentina Soccer Quiz</h1>
+<p>Test your knowledge about Argentina's soccer history and players!</p>
+
+<form class="quiz-container" id="quiz-form">
+    
+    <div class="question">
+        1. Who is Argentina's all-time top scorer?
+    </div>
+    <div class="choice">
+        <input type="radio" id="q1a1" name="q1" value="Lionel Messi">
+        <label for="q1a1">Lionel Messi</label>
+        
+        <input type="radio" id="q1a2" name="q1" value="Diego Maradona">
+        <label for="q1a2">Diego Maradona</label>
+        
+        <input type="radio" id="q1a3" name="q1" value="Gabriel Batistuta">
+        <label for="q1a3">Gabriel Batistuta</label>
+        
+        <input type="radio" id="q1a4" name="q1" value="Sergio Aguero">
+        <label for="q1a4">Sergio Aguero</label>
+    </div>
+    
+    <div class="question">
+        2. How many World Cups has Argentina won?
+    </div>
+    <div class="choice">
+        <input type="radio" id="q2a1" name="q2" value="1">
+        <label for="q2a1">1</label>
+        
+        <input type="radio" id="q2a2" name="q2" value="2">
+        <label for="q2a2">2</label>
+        
+        <input type="radio" id="q2a3" name="q2" value="3">
+        <label for="q2a3">3</label>
+        
+        <input type="radio" id="q2a4" name="q2" value="4">
+        <label for="q2a4">4</label>
+    </div>
+
+    <div class="question">
+        3. Which year did Argentina last win the World Cup?
+    </div>
+    <div class="choice">
+        <input type="radio" id="q3a1" name="q3" value="2018">
+        <label for="q3a1">2018</label>
+        
+        <input type="radio" id="q3a2" name="q3" value="2022">
+        <label for="q3a2">2022</label>
+        
+        <input type="radio" id="q3a3" name="q3" value="2014">
+        <label for="q3a3">2014</label>
+        
+        <input type="radio" id="q3a4" name="q3" value="2006">
+        <label for="q3a4">2006</label>
+    </div>
+
+    <div class="question">
+        4. Who scored twice in the 2022 World Cup final?
+    </div>
+    <div class="choice">
+        <input type="radio" id="q4a1" name="q4" value="Lionel Messi">
+        <label for="q4a1">Lionel Messi</label>
+        
+        <input type="radio" id="q4a2" name="q4" value="Julian Alvarez">
+        <label for="q4a2">Julian Alvarez</label>
+        
+        <input type="radio" id="q4a3" name="q4" value="Angel Di Maria">
+        <label for="q4a3">Angel Di Maria</label>
+        
+        <input type="radio" id="q4a4" name="q4" value="Emiliano Martinez">
+        <label for="q4a4">Emiliano Martinez</label>
+    </div>
+
+    <div class="question">
+        5. Which player is known as 'La Pulga'?
+    </div>
+    <div class="choice">
+        <input type="radio" id="q5a1" name="q5" value="Di Maria">
+        <label for="q5a1">Di Maria</label>
+        
+        <input type="radio" id="q5a2" name="q5" value="Messi">
+        <label for="q5a2">Messi</label>
+        
+        <input type="radio" id="q5a3" name="q5" value="Dybala">
+        <label for="q5a3">Dybala</label>
+        
+        <input type="radio" id="q5a4" name="q5" value="Otamendi">
+        <label for="q5a4">Otamendi</label>
+    </div>
+
+    <button type="button" onclick="checkQuiz()">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "Lionel Messi",
+        q2: "3",
+        q3: "2022",
+        q4: "Lionel Messi",
+        q5: "Messi"
+    };
+
+    let score = 0;
+
+    for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected) {
+            const label = selected.nextElementSibling;
+            if (selected.value === answers[q]) {
+                label.classList.add("correct");
+                score++;
+            } else {
+                label.classList.add("wrong");
+            }
+        }
+    }
+
+    document.getElementById("result").textContent = `Your score: ${score} / 5`;
+}
+</script>
+
+</body>
+</html>

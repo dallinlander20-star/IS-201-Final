@@ -1,0 +1,129 @@
+body {
+  background-color: #74e1ff;
+}
+
+.top-link {
+  position: absolute;  
+  top: 20px;           
+  right: 20px;       
+  background-color: #f0e68c; 
+  padding: 10px 15px;  
+  text-decoration: none; 
+  color: #000;         
+  font-weight: bold;  
+  border-radius: 5px;
+}
+
+.players-container {
+  display: flex;          
+  width: 100%;        
+  gap: 20px;            
+  padding: 20px;
+  box-sizing: border-box;  
+}
+
+.left-column { 
+    flex: 1;
+}
+
+.players-list {
+  flex: 1;                  
+  list-style-type: disc;     
+  font-size: 1.2rem;
+}
+
+.players-image {
+  flex: 1; 
+  width: 400px;                
+  max-width: 90%;          
+  height: auto;             
+  object-fit: cover;        
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h1 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #0a0a0a;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #222;
+}
+
+li {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    color: #111;
+}
+
+.video-text-container {
+    display: flex;         
+    gap: 20px;             
+    align-items: flex-start;
+}
+
+.video-text-container p {
+    flex: 1;                
+}
+
+.quiz-link-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding: 10px; 
+}
+
+.quiz-link {
+    background-color: #ffdd57; 
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2); 
+}
+
+.quiz-link:hover {
+    background-color: #ffd700; 
+    transform: scale(1.05);     
+}
+
+.back-to-top-container {
+    text-align: center;   
+    margin-top: 40px;    
+    margin-bottom: 20px;  
+}
+
+.back-to-top {
+    background-color: #f0e68c;
+    color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #ffd700;
+}
